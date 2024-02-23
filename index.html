@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <main class="main">
+        <img class="logo" src="./assets/logo.jpg" alt="Logo alura">
+        <section class="texto_digitado">
+            <textarea class="text_input" id="texto-digitado"></textarea>
+ 
+            <div class="area_alerta">
+                <img class="icone_alerta" src="./assets/alert.png">
+                <label class="mensagem_alerta">Somente números minusculos e sem acento</label>
+            </div>
+
+            <div class="botoes">
+                <button class="botao_criptografar" onClick="criptografarTexto()" id="bnt-criptografar">Criptografar</button>
+
+                <button class="botao_descriptografar" onClick="descriptografarTexto()" id="btn-descriptografar">Descriptografar</button>
+            </div>
+           
+        </section>
+        
+        <section class="area_resultado">
+            <div class="div_resultado">
+                <textarea class="resultado" id="texto_resultado">Nenhuma mensagem encontrada! Digite o texto a ser criptografado..</textarea>
+                <button class="botao_copiar" onClick="copiarTexto()" style="display:none" id="btn-copiar">Copiar</button>
+
+            </div>
+            
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+    
+</body>
+</html>
