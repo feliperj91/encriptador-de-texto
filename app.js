@@ -1,7 +1,9 @@
 function criptografarTexto(){
         
     let texto = document.getElementById("texto-digitado").value; /*Variavel texto recebe o conteudo do texto digitado */
+    let resultado = document.getElementById("texto_resultado");
     let copiar = document.getElementById("btn-copiar");
+    let imagem = document.getElementById("img");
 
     if (texto == ""){
         alert("Digite o texto para ser Criptografado.");
@@ -16,6 +18,8 @@ function criptografarTexto(){
     .replaceAll("u", "ufat"); /* texto_resultado recebe o conteudo do texto digitado, já criptografado. */
     
     copiar.style.display = 'block';
+    resultado.style.display = 'block';
+    imagem.style.display = 'none';
     }
 }
 
