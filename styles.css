@@ -1,13 +1,31 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+
+
 :root {
     --corPrincipal: #000000;
     --corSecundária: #bbb5b5b9;
+    --corTextos: #ffffff;
+    
 }
+
 
 .main{
 display: flex;
 width: 100%;
 height: 100%;
 background-color: var(--corPrincipal);
+
 
 }
 
@@ -21,15 +39,17 @@ height: 2rem;
 .texto_digitado{
 width: 50%;
 margin: 3rem 0 0 0;
+
 }
 
 .text_input{
     width: 98%;
     height: 500px;
+    color: var(--corTextos);
 }
 
 .area_alerta{
-color: var(--corSecundária);
+color: var(--corTextos);
 font-size: 1.2rem;
 display: flex;
 align-items: center;
@@ -42,7 +62,7 @@ gap: 5px;
 
 .botoes{
     display:flex;
-    margin: 2% 0 0 0;
+    margin: 2% 0px 0px 0px;
     justify-content: center;
     gap: 5px;
     
@@ -58,6 +78,7 @@ gap: 5px;
     align-items: center;
     justify-content: start;
     margin: 0px 0px 0px 50px;
+    background-color: #ffffff;
 
 }
 
@@ -65,12 +86,14 @@ gap: 5px;
     border-radius: 25px;
     width: 100%;
     height: 70%;
+    
 }
 
 .imagem h2{
    width: 80%;   
    font-size: 1.4rem;   
-   color: var(--corSecundária);
+   color: #000000;
+   
 }
 
 
@@ -117,8 +140,40 @@ gap: 5px;
     
 }
 
+.audio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    background-color: var(--corPrincipal);
+    
+    
+}
 
-@media (max-width: 600px) {
+.audio p, audio{
+    margin: 0 50px;
+    color:#ffffff;
+    
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--corPrincipal);
+}
+
+.rodape p{
+    font-size: 2rem;    
+    color: var(--corTextos);
+    
+    
+}
+
+@media (max-width: 800px) {
     .main{
         display: flex;
         flex-direction: column;
@@ -136,11 +191,18 @@ gap: 5px;
         flex-direction: column;
         width: 98%;
         height: 500px;
-        align-items: cente;
-        background-color: red;
+        align-items: center;
+        background-color: #000000;
         margin:0px;
     
     }
+
+    .imagem h2{
+        width: 80%;   
+        font-size: 1.4rem;   
+        color: #ffffff;
+        
+     }
     
     .area_resultado{
         width: 100%;
@@ -149,7 +211,6 @@ gap: 5px;
     }
 
     .resultado{
-
     width: 98%;
     margin: 0px;
     }
@@ -163,7 +224,23 @@ gap: 5px;
 
     }
 
-  
+    .audio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: var(--corPrincipal);
+        
+        
+    }
+    
+    .audio p, audio{
+        color:#ffffff;
+        margin: 2% 0 0 0;
+        
+        
+    }
 
 
 
