@@ -235,10 +235,13 @@ gap: 5px;
     
 }
 
+
+
 @media (max-width: 800px) {
     .main{
         display: flex;
         flex-direction: column;
+        
     }
 
     .texto_digitado{
