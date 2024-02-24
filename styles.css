@@ -240,7 +240,8 @@ gap: 5px;
 @media (max-width: 800px) {
     .main{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        background-image: url(./assets/back.jpg);
         
     }
 
