@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+  
 }
 body{
     font-size: 100%;
     list-style-type: none;
+   
 }
 
 
@@ -16,15 +18,37 @@ body{
     --corPrincipal: #000000;
     --corSecundária: #bbb5b5b9;
     --corTextos: #ffffff;
+   
     
 }
 
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--corPrincipal);
+    
+}
 
+.topo p, audio{
+    color: var(--corTextos);
+}
+
+.audio_topo{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
 .main{
 display: flex;
 width: 100%;
 height: 100%;
 background-color: var(--corPrincipal);
+background-image: url(./assets/back.jpg);
+
+
 
 
 }
@@ -38,13 +62,16 @@ height: 2rem;
 
 .texto_digitado{
 width: 50%;
-margin: 3rem 0 0 0;
+margin: 4% 0 0 0;
 
 }
 
 .text_input{
-    width: 98%;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    width: 95%;
     height: 500px;
+    margin: 0 0 0 10px;
     color: var(--corTextos);
 }
 
@@ -53,6 +80,7 @@ color: var(--corTextos);
 font-size: 1.2rem;
 display: flex;
 align-items: center;
+justify-content: center;
 gap: 5px;
 }
 
@@ -64,8 +92,35 @@ gap: 5px;
     display:flex;
     margin: 2% 0px 0px 0px;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     
+}
+
+.botoes_resultado{
+    display:flex;
+    margin: 2% 0px 0px 0px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botao_criptografar, .botao_descriptografar, .botao_copiar, .botao_limpar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corSecundária);
+    width: 10rem;
+    height: 2rem;
+    border-radius: 30px;
+    
+    
+}
+
+
+.botao_criptografar:hover, .botao_descriptografar:hover, .botao_copiar:hover, .botao_limpar:hover {
+    transform:scale(1.1);
+    transition-duration: 1s;
+    background-color: var(--corTextos);
+    box-shadow: 0 12px 16px 0 rgba(255, 253, 253, 0.24),0 17px 50px 0 rgba(250, 249, 249, 0.19);
 }
 
 .imagem {
@@ -76,14 +131,14 @@ gap: 5px;
     width: 98%;
     height: 500px;
     align-items: center;
-    justify-content: start;
+    justify-content: space-around;
     margin: 0px 0px 0px 50px;
-    background-color: #ffffff;
+    background-color: var(--corTextos);
 
 }
 
-.img-murphy{    
-    border-radius: 25px;
+.img-tema{    
+    border-radius: 20%;
     width: 100%;
     height: 70%;
     
@@ -92,7 +147,7 @@ gap: 5px;
 .imagem h2{
    width: 80%;   
    font-size: 1.4rem;   
-   color: #000000;
+   color: var(--corPrincipal)
    
 }
 
@@ -101,6 +156,7 @@ gap: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
    
     
 }
@@ -112,10 +168,14 @@ gap: 5px;
     
     
     
+    
+    
 
 }
 
 .resultado{
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,13 +186,14 @@ gap: 5px;
     
     
     
+    
     /* Ao clicar em criptografar, definir essas configuraçõas para o .resultado
     justify-content:flex-start;
     align-items:first baseline;
     */
 }
 
-.botao_copiar{
+.botao_copiar, .botao_limpar{
     display:flex;
     justify-content: end;
     margin: 7% 0 7% 0;
@@ -153,7 +214,7 @@ gap: 5px;
 
 .audio p, audio{
     margin: 0 50px;
-    color:#ffffff;
+    color:var(--corTextos)
     
 }
 
@@ -162,8 +223,9 @@ gap: 5px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: var(--corPrincipal);
+    
 }
 
 .rodape p{
@@ -192,15 +254,16 @@ gap: 5px;
         width: 98%;
         height: 500px;
         align-items: center;
-        background-color: #000000;
-        margin:0px;
+        background-color: var(--corPrincipal);
+        margin: 0px;
     
     }
 
     .imagem h2{
         width: 80%;   
         font-size: 1.4rem;   
-        color: #ffffff;
+        color: var(--corTextos)
+        
         
      }
     
@@ -224,26 +287,25 @@ gap: 5px;
 
     }
 
-    .audio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: var(--corPrincipal);
-        
-        
+    .topo p, audio{
+        color: var(--corTextos);
     }
     
-    .audio p, audio{
-        color:#ffffff;
-        margin: 2% 0 0 0;
-        
-        
+    .audio_topo{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
     }
 
 
-
+    .botao_criptografar:hover, .botao_descriptografar:hover, .botao_copiar:hover, .botao_limpar:hover {
+        transform:scale(1.1);
+        transition-duration: 1s;
+        background-color: var(--corTextos);
+        box-shadow: 0 12px 16px 0 rgba(255, 253, 253, 0.24),0 17px 50px 0 rgba(250, 249, 249, 0.19);
+    }
 
 
 }

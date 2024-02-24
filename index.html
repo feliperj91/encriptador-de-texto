@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="./app.js"></script>
 </head>
 <body>
-    <main class="main">
+    <section class="topo">
         <img class="logo" src="./assets/logo.jpg" alt="Logo alura">
+        <div class="audio_topo">
+            <p>Ative o som para uma melhor experiencia!</p>
+            <audio controls  src="./assets/STAY.mp3" type="audio.mpeg"></audio> 
+
+        </div>
+        
+    </section>
+
+    <main class="main">
+        
+       
         <section class="texto_digitado">
             <textarea style="resize: none; background-color: transparent; border: none" class="text_input" id="texto-digitado"></textarea>
  
@@ -29,25 +42,21 @@
         <section class="area_resultado">
             <div class="div_resultado">
                 <div class="imagem" id="img" > 
-                    <img class="img-murphy" src="./assets/murphy.jpg">
+                    <img class="img-tema" src="./assets/murphy.jpg">
                     <h2>Você está no Tesseract, envie uma mensagem para Murphy!</h2>  
                 </div>
-                <textarea class="resultado" style="display:none" id="texto_resultado">Nenhuma mensagem encontrada! Digite um texto a ser criptografado..</textarea>
-                <button class="botao_copiar" onClick="copiarTexto()" style="display:none" id="btn-copiar">Copiar</button>
-
+                
+                <textarea readonly="true" class="resultado" style="display:none; resize: none" id="texto_resultado"></textarea>
+                <div class="botoes_resultado">
+                    <button class="botao_copiar" onClick="copiarTexto()" style="display:none" id="btn-copiar">Copiar</button>
+                    <button class="botao_limpar" onClick="limparConteudo()" style="display:none" id="btn-limpar">Limpar</button>
+                </div>
             </div>
 
             
           </section> 
           
-    </main>
-    <section class="final">
-        <div class="audio">
-            <p>Ative o som para uma melhor experiencia!</p>
-            <audio controls  src="./assets/STAY.mp3" type="audio.mpeg"></audio>    
-          </div>   
-          
-          
+    </main>        
          
       </section>
 

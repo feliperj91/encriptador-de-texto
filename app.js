@@ -1,13 +1,18 @@
+
+
 function criptografarTexto(){
         
     let texto = document.getElementById("texto-digitado").value; /*Variavel texto recebe o conteudo do texto digitado */
     let resultado = document.getElementById("texto_resultado");
     let copiar = document.getElementById("btn-copiar");
     let imagem = document.getElementById("img");
+    let focoTexto = document.getElementById("texto-digitado").focus();
+    let limpar = document.getElementById("btn-limpar");
 
+    
     if (texto == ""){
-        alert("Digite o texto para ser Criptografado.");
-        console.log("Vazio");
+        alert("Murphy está aguardando, digite a mensagem antes de enviar!");
+        focoTexto.focus();
     }
 
     else {
@@ -20,19 +25,22 @@ function criptografarTexto(){
     copiar.style.display = 'block';
     resultado.style.display = 'block';
     imagem.style.display = 'none';
+    limpar.style.display = "block";
     }
 }
 
 
 function descriptografarTexto(){
     let textoDescriptografado = document.getElementById("texto_resultado").value;
-    
+    let texto = document.getElementById("texto-digitado").value; /*Variavel texto recebe o conteudo do texto digitado */
 
-    if (textoDescriptografado == "Nenhuma mensagem encontrada! Digite o texto a ser criptografado.."){
-        alert("O texto precisa ser Criptografado antes.");
-        
+    if (textoDescriptografado == ""){
+        alert("Os dados da expedição ainda não foram criptografados!");
+        focoTexto.focus();
+       
     }
 
+   
     
     texto_resultado.innerHTML = textoDescriptografado.replaceAll("enter", "e")
     .replaceAll("imes", "i")
@@ -44,12 +52,20 @@ function descriptografarTexto(){
 
 function copiarTexto(){
    let text = texto_resultado.value;
+   let copiar = document.getElementById("btn-copiar");
+
    navigator.clipboard.writeText(text);
+   /* copiar.textContent = "Copiado!"; */
    alert("Copiado para a área de transferência.");
+   
    
 }
 
+function limparConteudo(){   
+    location.reload();
 
+    
+}
 
   
     
