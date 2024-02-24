@@ -253,6 +253,7 @@ gap: 5px;
     }
     .mensagem_alerta{
     font-size: 0.6rem;
+    
 
     }
     .imagem {
@@ -286,6 +287,9 @@ gap: 5px;
     margin: 0px;
     }
 
+    .area_alerta{
+        margin: 1.5rem 0 1.5rem 0;
+    }
     .div_resultado{
         display: flex;
         flex-direction: column;
@@ -316,6 +320,10 @@ gap: 5px;
         transition-duration: 1s;
         background-color: var(--corTextos);
         box-shadow: 0 12px 16px 0 rgba(255, 253, 253, 0.24),0 17px 50px 0 rgba(250, 249, 249, 0.19);
+    }
+
+    .botoes{
+        margin: 1.1rem 0 1.1rem 0;
     }
 
     .rodape p{
