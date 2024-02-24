@@ -220,6 +220,7 @@ gap: 5px;
 
 .rodape{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -227,14 +228,24 @@ gap: 5px;
     background-color: var(--corPrincipal);
     
 }
-
+.icones-rodape{
+    display:flex;
+    justify-content: center;
+    gap: 5px;
+}
 .rodape p{
+    display: flex;
+    justify-content: center;
     font-size: 2rem;    
     color: var(--corTextos);
     
     
 }
 
+.icone-linkedin, .icone-github {
+    justify-content: center;
+    width: 30px;
+}
 
 
 @media (max-width: 800px) {
@@ -324,6 +335,13 @@ gap: 5px;
 
     .botoes{
         margin: 1.1rem 0 1.1rem 0;
+    }
+
+  
+    
+    .icone-linkedin, .icone-github {
+        margin: 5px 0 0 0;
+        width: 20px;
     }
 
     .rodape p{
