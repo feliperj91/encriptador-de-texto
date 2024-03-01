@@ -51,13 +51,9 @@ function descriptografarTexto(){
 
 
 function copiarTexto(){
-   let text = texto_resultado.value;
-   let copiar = document.getElementById("btn-copiar");
-
-   navigator.clipboard.writeText(text);
-   /* copiar.textContent = "Copiado!"; */
-   alert("Copiado para a área de transferência.");
-   
+   let texto = texto_resultado.value;
+   navigator.clipboard.writeText(texto);  
+   alert("Copiado para a área de transferência.");   
    
 }
 
